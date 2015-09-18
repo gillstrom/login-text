@@ -1,6 +1,6 @@
 {
   "name": "login-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set the login window text in OS X systems",
   "license": "MIT",
   "repository": "gillstrom/login-text",
