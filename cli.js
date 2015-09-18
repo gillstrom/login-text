@@ -5,8 +5,8 @@ var loginText = require('./');
 
 var cli = meow({
 	help: [
-		'Usage',
-		'  $ login-text [input]'
+		'Example',
+		'  $ login-text "Welcome to my computer"'
 	]
 });
 
