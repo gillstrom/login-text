@@ -1,11 +1,10 @@
-'use strict';
-var test = require('ava');
-var loginText = require('./');
+import test from 'ava';
+import fn from './';
 
-test('should ', function (t) {
+test(t => {
 	t.plan(1);
 
-	loginText('unicorns', function (err) {
+	fn('unicorns', err => {
 		t.assert(!err, err);
 	});
 });
