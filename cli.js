@@ -10,9 +10,4 @@ var cli = meow({
 	]
 });
 
-loginText(cli.input[0] || '', function (err) {
-	if (err) {
-		console.error(err.message);
-		process.exit(1);
-	}
-});
+loginText(cli.input[0]);

@@ -29,9 +29,9 @@ $ login-text --help
 ## Usage
 
 ```js
-var loginText = require('login-text');
+const loginText = require('login-text');
 
-loginText('Welcome to my computer', function (err) {
+loginText('Welcome to my computer').then(() => {
 	console.log('Login text is now set');
 });
 ```

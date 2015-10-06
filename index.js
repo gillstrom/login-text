@@ -1,9 +1,11 @@
 'use strict';
 var execFile = require('child_process').execFile;
+var Promise = require('pinkie-promise');
+var pify = require('pify');
 
-module.exports = function (str, cb) {
+module.exports = function (str) {
 	if (process.platform !== 'darwin') {
-		throw new Error('Only OS X systems are supported');
+		return Promise.reject(new Error('Only OS X systems are supported'));
 	}
 
 	var cmd = 'sudo';
@@ -15,12 +17,5 @@ module.exports = function (str, cb) {
 		str
 	];
 
-	execFile(cmd, args, function (err) {
-		if (err) {
-			cb(err);
-			return;
-		}
-
-		cb();
-	});
+	return pify(execFile, Promise)(cmd, args);
 };
