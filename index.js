@@ -1,7 +1,5 @@
 'use strict';
-var execFile = require('child_process').execFile;
-var Promise = require('pinkie-promise');
-var pify = require('pify');
+var execa = require('execa');
 
 module.exports = function (str) {
 	if (process.platform !== 'darwin') {
@@ -17,5 +15,5 @@ module.exports = function (str) {
 		str
 	];
 
-	return pify(execFile, Promise)(cmd, args);
+	return execa(cmd, args);
 };
