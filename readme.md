@@ -1,6 +1,6 @@
 # login-text
 
-> Set the login window text in OS X systems
+> Set the login window text in *(OS X)*
 
 *This will ask for sudo password*
 
@@ -22,7 +22,7 @@ $ npm install --global login-text
 $ login-text --help
 
   Example
-    login-text "Welcome to my computer"
+    $ login-text "Welcome to my computer"
 ```
 
 

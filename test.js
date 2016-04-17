@@ -1,6 +1,6 @@
 import test from 'ava';
 import fn from './';
 
-test(async t => {
+test(async () => {
 	await fn('Test login text');
 });
